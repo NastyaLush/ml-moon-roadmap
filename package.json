@@ -1,6 +1,7 @@
 {
   "name": "ml-moon-roadmap",
   "private": true,
+  "homepage": "https://github.com/NastyaLush/ml-moon-roadmap",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -38,6 +39,5 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4"
-  },
-  "homepage": "https://nastyalush.github.io/ml-moon-roadmap"
+  }
 }
