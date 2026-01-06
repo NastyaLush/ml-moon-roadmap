@@ -492,3 +492,92 @@ a {
     }
 }
 
+.section {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.sectionTitle {
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 10px;
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.linkItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(0,0,0,0.22);
+    color: rgba(255,255,255,0.86);
+    text-decoration: none;
+}
+
+.linkItem:hover {
+    background: rgba(0,0,0,0.30);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.linkHint {
+    margin-left: auto;
+    font-family: var(--mono);
+    color: rgba(255,255,255,0.62);
+}
+
+.linkItemDisabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.checklist {
+    display: grid;
+    gap: 8px;
+}
+
+.checkItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(0,0,0,0.18);
+}
+
+.checkItem input {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: rgba(245,233,188,0.95);
+}
+
+.checkText {
+    color: rgba(255,255,255,0.82);
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.checkText.isChecked {
+    color: rgba(140,255,210,0.85);
+    text-decoration: line-through;
+}
+
+.btnSmall {
+    padding: 7px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+}

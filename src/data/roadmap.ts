@@ -21,129 +21,199 @@ export type RoadmapStepExtras = {
 
 export const roadmapSteps: Array<RoadmapStep<RoadmapStepExtras>> = [
     {
-        id: "foundations-math",
-        title: "Математика без боли",
+        id: "math-culture",
+        title: "Математическая культура и доказательства",
         description:
-            "Линейная алгебра (вектора, матрицы), базовый анализ (производные), вероятность/статистика — ровно настолько, чтобы понимать модели и метрики.",
-        tags: ["math", "stats"],
-        difficulty: "mid",
-        duration: "1–2 недели",
-    },
-    {
-        id: "python-stack",
-        title: "Python + стек данных",
-        description:
-            "NumPy/Pandas, визуализация, работа с данными и типичный пайплайн: загрузка → очистка → признаки → модель → оценка.",
-        tags: ["python", "numpy", "pandas"],
+            "Логика, множества, кванторы, методы доказательств. Формирование математического мышления и привычки к строгим определениям.",
+        tags: ["math", "proofs", "logic"],
         difficulty: "easy",
-        duration: "1 неделя",
+        duration: "3–4 недели",
+        links: [
+            {
+                label: "Математическая логика — ВШЭ (К. Кноблок)",
+                url: "https://www.youtube.com/playlist?list=PLcsjsqLLSfNDX6hXn2JqQ6Jt8v0hXnqfH",
+            },
+            {
+                label: "MIT Mathematics for Computer Science",
+                url: "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+            },
+        ],
+        checklist: [
+            "Понимаю кванторы ∀ и ∃",
+            "Умею доказывать от противного и по индукции",
+            "Могу формально записать определение и контрпример",
+        ],
     },
+
     {
-        id: "ml-basics",
-        title: "База ML: постановка задачи",
+        id: "linear-algebra",
+        title: "Линейная алгебра (строгая)",
         description:
-            "Классификация/регрессия, train/val/test, утечки данных, baseline, кросс-валидация. Учимся задавать правильные вопросы к данным.",
-        tags: ["ml", "baseline"],
-        difficulty: "easy",
-        duration: "1 неделя",
-    },
-    {
-        id: "metrics",
-        title: "Метрики и валидация",
-        description:
-            "Accuracy/Precision/Recall/F1, ROC-AUC/PR-AUC, RMSE/MAE, калибровка. Подбирать метрику под бизнес-смысл и не обманывать себя.",
-        tags: ["metrics"],
+            "Векторные пространства, линейные отображения, собственные значения, ортогональность. Основа всех моделей ML.",
+        tags: ["linear-algebra", "math", "core-ml"],
         difficulty: "mid",
-        duration: "3–5 дней",
+        duration: "6–8 недель",
+        links: [
+            {
+                label: "Линейная алгебра — ФКН ВШЭ (А. Кузнецов)",
+                url: "https://www.youtube.com/playlist?list=PLcsjsqLLSfNDP8m0Ssv7Hc5sGz4lZp4Yk",
+            },
+            {
+                label: "MIT 18.06 Linear Algebra (Strang)",
+                url: "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+            },
+            {
+                label: "Axler — Linear Algebra Done Right",
+                url: "https://linear.axler.net/",
+            },
+        ],
+        checklist: [
+            "Понимаю векторные пространства и базисы",
+            "Могу доказать теорему о ранге",
+            "Понимаю спектральную теорему и SVD",
+            "Знаю, что такое положительно определённые матрицы",
+        ],
     },
+
     {
-        id: "classic-models",
-        title: "Классические модели",
+        id: "analysis",
+        title: "Математический анализ (1D и многомерный)",
         description:
-            "Линейные модели, деревья, случайный лес, градиентный бустинг. Понимать, когда что работает, и почему бустинг — твой друг.",
-        tags: ["sklearn", "trees", "boosting"],
-        difficulty: "mid",
-        duration: "1–2 недели",
-    },
-    {
-        id: "feature-engineering",
-        title: "Признаки и подготовка данных",
-        description:
-            "Импутация, масштабирование, кодирование категорий, текстовые признаки, leakage, pipeline в sklearn. Делать данные удобными для модели.",
-        tags: ["features", "pipelines"],
-        difficulty: "mid",
-        duration: "1 неделя",
-    },
-    {
-        id: "model-debug",
-        title: "Диагностика и улучшение",
-        description:
-            "Learning curves, bias/variance, overfitting, подбор гиперпараметров, early stopping. Улучшать осмысленно, а не «на удачу».",
-        tags: ["debug", "tuning"],
-        difficulty: "mid",
-        duration: "1 неделя",
-    },
-    {
-        id: "deep-learning-intro",
-        title: "Порог в Deep Learning",
-        description:
-            "Понимание нейросетей: слои, активации, оптимизация, регуляризация. Достаточно, чтобы уверенно читать туториалы и статьи.",
-        tags: ["dl", "nn"],
+            "Пределы, непрерывность, производные, градиенты, гессианы. Строгая база для оптимизации и обучения моделей.",
+        tags: ["analysis", "math", "optimization"],
         difficulty: "hard",
-        duration: "1–2 недели",
+        duration: "8–10 недель",
+        links: [
+            {
+                label: "Математический анализ — МФТИ",
+                url: "https://www.youtube.com/playlist?list=PLcsjsqLLSfNDpJcZCkzYz9bA9YjKX5qfP",
+            },
+            {
+                label: "Apostol — Calculus Vol. 1–2",
+                url: "https://www.amazon.com/dp/0471000051",
+            },
+            {
+                label: "Spivak — Calculus on Manifolds",
+                url: "https://www.amazon.com/dp/0805390219",
+            },
+        ],
+        checklist: [
+            "Понимаю строгие определения предела и непрерывности",
+            "Работаю с градиентом как линейным отображением",
+            "Понимаю условия экстремума через гессиан",
+        ],
     },
+
     {
-        id: "cv-or-nlp",
-        title: "Выбери ветку: CV или NLP",
+        id: "measure-probability",
+        title: "Теория меры и вероятность",
         description:
-            "Компьютерное зрение (CNN, аугментации) или NLP (токенизация, трансформеры). Выбирай то, что ближе сердцу (и лего-вселенной).",
-        tags: ["cv", "nlp"],
-        difficulty: "mid",
-        duration: "1–2 недели",
-    },
-    {
-        id: "embeddings",
-        title: "Эмбеддинги и представления",
-        description:
-            "Векторные представления, similarity search, базовые идеи retrieval. Это часто делает проекты «умными» без магии.",
-        tags: ["embeddings"],
-        difficulty: "mid",
-        duration: "3–7 дней",
-    },
-    {
-        id: "interpretability",
-        title: "Интерпретация и доверие",
-        description:
-            "Feature importance, SHAP (идея), ошибки и их анализ. Уметь объяснить модель и не бояться «почему она так решила».",
-        tags: ["xai", "analysis"],
-        difficulty: "mid",
-        duration: "3–7 дней",
-    },
-    {
-        id: "mlops-lite",
-        title: "MLOps-лайт без боли",
-        description:
-            "Версионирование данных/моделей, воспроизводимость, контроль экспериментов, простая структура проекта. Дисциплина — суперсила.",
-        tags: ["mlops", "repro"],
-        difficulty: "mid",
-        duration: "1 неделя",
-    },
-    {
-        id: "production",
-        title: "Продакшен-мышление",
-        description:
-            "Инференс, latency, мониторинг качества, дрейф данных, A/B-тесты. Делать так, чтобы модель жила, а не умирала после ноутбука.",
-        tags: ["prod", "monitoring"],
+            "Вероятность как теория меры: ожидание, сходимости, LLN, CLT, концентрация. Критично для теории ML.",
+        tags: ["probability", "measure-theory", "math"],
         difficulty: "hard",
-        duration: "1–2 недели",
+        duration: "8–10 недель",
+        links: [
+            {
+                label: "Теория вероятностей — МФТИ",
+                url: "https://www.youtube.com/playlist?list=PLcsjsqLLSfNCrPp4S4z5h6f7nF3GxJ5xM",
+            },
+            {
+                label: "Durrett — Probability: Theory and Examples",
+                url: "https://www.amazon.com/dp/1108473687",
+            },
+            {
+                label: "Terry Tao — Measure Theory Notes",
+                url: "https://terrytao.wordpress.com/books/an-introduction-to-measure-theory/",
+            },
+        ],
+        checklist: [
+            "Понимаю вероятность как меру",
+            "Умею работать с математическим ожиданием",
+            "Знаю виды сходимости и их связи",
+            "Понимаю концентрационные неравенства",
+        ],
     },
+
     {
-        id: "capstone",
-        title: "Капстоун-проект под луной ✨",
+        id: "statistics",
+        title: "Математическая статистика",
         description:
-            "Собери мини-проект: данные → пайплайн → модель → оценка → выводы. Красиво оформи README как историю: «я прошёл путь».",
-        tags: ["project", "portfolio"],
+            "Оценивание, ММП, байесовский вывод, асимптотика. Основа обобщения и интерпретации моделей.",
+        tags: ["statistics", "inference", "ml-theory"],
         difficulty: "mid",
-        duration: "1–2 недели",
-    }
+        duration: "6–8 недель",
+        links: [
+            {
+                label: "Математическая статистика — ВШЭ",
+                url: "https://www.youtube.com/playlist?list=PLcsjsqLLSfNDqzZ8QG9H8b5Fz3zXnq0mB",
+            },
+            {
+                label: "Casella & Berger — Statistical Inference",
+                url: "https://www.amazon.com/dp/0534243126",
+            },
+        ],
+        checklist: [
+            "Понимаю ММП и MAP",
+            "Знаю свойства оценок (несмещённость, состоятельность)",
+            "Понимаю доверительные интервалы и гипотезы",
+        ],
+    },
+
+    {
+        id: "optimization",
+        title: "Оптимизация для ML",
+        description:
+            "Выпуклость, KKT, градиентные методы, SGD. Математика обучения моделей.",
+        tags: ["optimization", "convex", "ml-core"],
+        difficulty: "hard",
+        duration: "6–8 недель",
+        links: [
+            {
+                label: "Выпуклая оптимизация — ВШЭ",
+                url: "https://www.youtube.com/playlist?list=PLcsjsqLLSfNDuY0m8z5QJzvF3ZbLJr2Pp",
+            },
+            {
+                label: "Boyd & Vandenberghe — Convex Optimization",
+                url: "https://web.stanford.edu/~boyd/cvxbook/",
+            },
+            {
+                label: "Nesterov — Convex Optimization",
+                url: "https://www.springer.com/gp/book/9780387006655",
+            },
+        ],
+        checklist: [
+            "Понимаю выпуклые функции и множества",
+            "Умею применять условия KKT",
+            "Понимаю сходимость градиентных методов",
+        ],
+    },
+
+    {
+        id: "transition-to-ml",
+        title: "Переход к машинному обучению",
+        description:
+            "После полной математической базы — классический и теоретический ML без пробелов.",
+        tags: ["ml", "theory", "transition"],
+        difficulty: "mid",
+        duration: "4–6 недель",
+        links: [
+            {
+                label: "Сергей Николенко — Машинное обучение",
+                url: "https://www.youtube.com/playlist?list=PL6lj3g9Y2Hk9x3YqFzqZ8KxYz3XnPp2rM",
+            },
+            {
+                label: "Shalev-Shwartz — Understanding Machine Learning",
+                url: "https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/",
+            },
+            {
+                label: "Bishop — Pattern Recognition and Machine Learning",
+                url: "https://www.springer.com/gp/book/9780387310738",
+            },
+        ],
+        checklist: [
+            "Понимаю вывод формул в ML",
+            "Могу читать ML-статьи с математикой",
+            "Понимаю, что и почему оптимизируется",
+        ],
+    },
 ];
